@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mente em Foco | Guia jovem sobre hábitos, equilíbrio e bem-estar</title>
+  <meta
+    name="description"
+    content="Mente em Foco é uma página educativa para jovens com conteúdos sobre rotina saudável, equilíbrio emocional, organização, autocuidado e desenvolvimento pessoal."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mente em Foco | Guia jovem sobre hábitos, equilíbrio e bem-estar" />
+  <meta
+    property="og:description"
+    content="Um portal educativo com visual moderno sobre rotina saudável, foco, autocuidado, equilíbrio emocional e desenvolvimento pessoal."
+  />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="theme-color" content="#3b82f6" />
+  <style>
+    :root {
+      --bg: #f4f8fc;
+      --surface: #ffffff;
+      --surface-soft: #edf5ff;
+      --primary: #3b82f6;
+      --primary-dark: #1f5fcb;
+      --accent: #22c1a1;
+      --text: #1f2937;
+      --muted: #667085;
+      --border: #dbe5f0;
+      --shadow: 0 16px 38px rgba(15, 23, 42, 0.08);
+      --radius: 20px;
+      --max: 1220px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.10), transparent 28%),
+        radial-gradient(circle at top right, rgba(34, 193, 161, 0.12), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 4.5rem 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.12);
+      color: var(--primary-dark);
+      font-size: 0.84rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .title {
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.9rem;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 2rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(244, 248, 252, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(219, 229, 240, 0.95);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: var(--shadow);
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary-dark);
+    }
+
+    .hero {
+      padding: 2.7rem 0 2rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.4rem;
+      align-items: stretch;
+    }
+
+    .hero-main {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image {
+      min-height: 340px;
+      background:
+        linear-gradient(135deg, rgba(31, 95, 203, 0.88), rgba(34, 193, 161, 0.88)),
+        #dcecff;
+      position: relative;
+    }
+
+    .hero-image::after {
+      content: "";
+      position: absolute;
+      inset: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 24px;
+    }
+
+    .hero-body {
+      padding: 1.8rem;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.42rem 0.72rem;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.12);
+      color: var(--primary-dark);
+      font-size: 0.84rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .meta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-body h1 {
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      margin-bottom: 1rem;
+      max-width: 12ch;
+    }
+
+    .hero-body p {
+      color: var(--muted);
+      max-width: 62ch;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0.95rem 1.25rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 12px 28px rgba(59, 130, 246, 0.28);
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .side-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .side-card h3 {
+      font-size: 1.02rem;
+      line-height: 1.35;
+      margin: 0.45rem 0;
+    }
+
+    .side-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.14), rgba(34, 193, 161, 0.18));
+      color: var(--primary-dark);
+      font-size: 1.2rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.08rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .content-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.4rem;
+      align-items: start;
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+
+    .article-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .article-thumb {
+      min-height: 190px;
+      background:
+        linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(34, 193, 161, 0.88)),
+        #e2f0ff;
+    }
+
+    .article-body {
+      padding: 1.25rem;
+    }
+
+    .article-body h3 {
+      font-size: 1.1rem;
+      line-height: 1.3;
+      margin-bottom: 0.65rem;
+      letter-spacing: -0.02em;
+    }
+
+    .article-body p {
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    .article-body a {
+      color: var(--primary-dark);
+      font-weight: 800;
+    }
+
+    .sidebar-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 1rem;
+    }
+
+    .sidebar-box h3 {
+      font-size: 1.06rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .list li {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .list li:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .list a {
+      display: block;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+
+    .list span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+    }
+
+    .tip-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.3rem;
+      box-shadow: var(--shadow);
+    }
+
+    .tip-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .tip-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .faq {
+      display: grid;
+      gap: 1rem;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.1rem 1.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      font-weight: 800;
+      position: relative;
+      padding-right: 1.5rem;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: var(--primary-dark);
+      font-size: 1.15rem;
+    }
+
+    details[open] summary::after {
+      content: "–";
+    }
+
+    details p {
+      color: var(--muted);
+      margin-top: 0.9rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #ffffff, #edf6ff);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .cta h2 {
+      font-size: clamp(1.7rem, 2.4vw, 2.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta p {
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0 3rem;
+      margin-top: 1.5rem;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem 1.2rem;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .footer p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .content-layout,
+      .cards-3,
+      .tips-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .article-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-body h1 {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.9rem 0;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+
+      .article-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        width: min(100% - 1.2rem, var(--max));
+      }
+
+      .section {
+        padding: 3.8rem 0;
+      }
+
+      .hero-body,
+      .side-card,
+      .card,
+      .article-body,
+      .sidebar-box,
+      .tip-card,
+      .cta {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#inicio" class="brand" aria-label="Mente em Foco - Página inicial">
+        <span class="brand-mark">MF</span>
+        <span>Mente em Foco</span>
+      </a>
+
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#guias">Guias</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <article class="hero-main">
+          <div class="hero-image" aria-hidden="true"></div>
+          <div class="hero-body">
+            <span class="tag">Guia em destaque</span>
+            <div class="meta">
+              <span>Hábitos saudáveis</span>
+              <span>Bem-estar jovem</span>
+              <span>Leitura leve</span>
+            </div>
+            <h1>Organizar a rotina também é cuidar de si</h1>
+            <p>
+              Mente em Foco é um portal educativo com outro estilo de conteúdo: foco em rotina equilibrada,
+              organização, autocuidado, hábitos positivos, concentração e bem-estar emocional no dia a dia.
+              A proposta é ajudar jovens a criarem uma vida mais leve, funcional e consciente.
+            </p>
+            <a href="#guias" class="btn">Explorar guias</a>
+          </div>
+        </article>
+
+        <aside class="hero-side">
+          <article class="side-card">
+            <span class="tag">Rotina</span>
+            <h3>Como criar hábitos simples que realmente funcionam</h3>
+            <p>Pequenas ações consistentes podem tornar o dia mais organizado e menos cansativo.</p>
+          </article>
+
+          <article class="side-card">
+            <span class="tag">Foco</span>
+            <h3>Estratégias para estudar com mais atenção e menos distração</h3>
+            <p>Entender seu ritmo e fazer pausas inteligentes pode ajudar bastante na concentração.</p>
+          </article>
+
+          <article class="side-card">
+            <span class="tag">Autocuidado</span>
+            <h3>Descanso, alimentação e tempo livre também importam</h3>
+            <p>Equilíbrio não é fazer tudo ao mesmo tempo, mas cuidar do que sustenta sua rotina.</p>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container">
+        <span class="eyebrow">Novo tema</span>
+        <h2 class="title">Outro nome, outro foco de conteúdo</h2>
+        <p class="subtitle">
+          Esta página segue um estilo diferente das anteriores. Em vez de focar principalmente em relações,
+          ela traz um formato de guia jovem sobre organização pessoal, hábitos saudáveis, foco nos estudos,
+          equilíbrio emocional e autocuidado cotidiano.
+        </p>
+
+        <div class="cards-3">
+          <article class="card">
+            <div class="icon">🕒</div>
+            <h3>Rotina equilibrada</h3>
+            <p>Aprenda a distribuir melhor seu tempo entre estudos, descanso, lazer e compromissos.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🎯</div>
+            <h3>Foco e organização</h3>
+            <p>Dicas práticas para manter atenção, definir prioridades e evitar sobrecarga no dia a dia.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🌿</div>
+            <h3>Autocuidado</h3>
+            <p>Pequenos cuidados com sono, pausas, emoções e hábitos podem fazer grande diferença.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="guias">
+      <div class="container">
+        <span class="eyebrow">Guias e conteúdos</span>
+        <h2 class="title">Leituras para uma rotina mais leve e funcional</h2>
+        <p class="subtitle">
+          Artigos educativos com foco em hábitos saudáveis, organização e bem-estar para jovens.
+        </p>
+
+        <div class="content-layout">
+          <div class="article-grid">
+            <article class="article-card">
+              <div class="article-thumb" aria-hidden="true"></div>
+              <div class="article-body">
+                <span class="tag">Organização</span>
+                <h3>Como montar uma rotina possível sem exageros</h3>
+                <p>
+                  Planejar o dia com equilíbrio ajuda a reduzir estresse e aumenta a sensação de clareza.
+                </p>
+                <a href="#faq">Ler mais</a>
+              </div>
+            </article>
+
+            <article class="article-card">
+              <div class="article-thumb" aria-hidden="true"></div>
+              <div class="article-body">
+                <span class="tag">Estudos</span>
+                <h3>Dicas para estudar com mais foco e constância</h3>
+                <p>
+                  Criar um ambiente organizado e dividir tarefas em etapas pode melhorar a concentração.
+                </p>
+                <a href="#faq">Ler mais</a>
+              </div>
+            </article>
+
+            <article class="article-card">
+              <div class="article-thumb" aria-hidden="true"></div>
+              <div class="article-body">
+                <span class="tag">Hábitos</span>
+                <h3>Pequenas mudanças que podem melhorar seu dia</h3>
+                <p>
+                  Ajustes simples na rotina podem gerar mais disposição, clareza e bem-estar ao longo da semana.
+                </p>
+                <a href="#faq">Ler mais</a>
+              </div>
+            </article>
+
+            <article class="article-card">
+              <div class="article-thumb" aria-hidden="true"></div>
+              <div class="article-body">
+                <span class="tag">Equilíbrio emocional</span>
+                <h3>Como reconhecer sinais de cansaço e desacelerar</h3>
+                <p>
+                  Observar limites e respeitar pausas pode ajudar a manter a rotina mais saudável.
+                </p>
+                <a href="#faq">Ler mais</a>
+              </div>
+            </article>
+          </div>
+
+          <aside>
+            <div class="sidebar-box">
+              <h3>Mais acessados</h3>
+              <ul class="list">
+                <li>
+                  <a href="#guias">Checklist para começar o dia com mais organização</a>
+                  <span>Rotina prática</span>
+                </li>
+                <li>
+                  <a href="#guias">Como dividir tarefas grandes em partes menores</a>
+                  <span>Produtividade leve</span>
+                </li>
+                <li>
+                  <a href="#guias">A importância do descanso entre atividades</a>
+                  <span>Autocuidado</span>
+                </li>
+                <li>
+                  <a href="#guias">Como equilibrar metas e tempo livre</a>
+                  <span>Bem-estar</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-box">
+              <h3>Categorias</h3>
+              <ul class="list">
+                <li>
+                  <a href="#guias">Organização pessoal</a>
+                  <span>Planejamento e rotina</span>
+                </li>
+                <li>
+                  <a href="#guias">Hábitos saudáveis</a>
+                  <span>Constância e equilíbrio</span>
+                </li>
+                <li>
+                  <a href="#guias">Foco nos estudos</a>
+                  <span>Atenção e produtividade</span>
+                </li>
+                <li>
+                  <a href="#guias">Autocuidado</a>
+                  <span>Descanso e bem-estar</span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Dicas rápidas</span>
+        <h2 class="title">Quatro ideias simples para colocar em prática</h2>
+        <p class="subtitle">
+          Um bloco direto para reforçar o estilo de guia prático desta página.
+        </p>
+
+        <div class="tips-grid">
+          <article class="tip-card">
+            <h3>1. Comece por uma prioridade</h3>
+            <p>Escolher o que é mais importante ajuda a diminuir a sensação de confusão.</p>
+          </article>
+
+          <article class="tip-card">
+            <h3>2. Faça pausas curtas</h3>
+            <p>Intervalos entre tarefas podem melhorar atenção e evitar cansaço acumulado.</p>
+          </article>
+
+          <article class="tip-card">
+            <h3>3. Evite excesso de comparação</h3>
+            <p>Cada pessoa tem um ritmo diferente, e isso também vale para organização e produtividade.</p>
+          </article>
+
+          <article class="tip-card">
+            <h3>4. Reserve tempo para descansar</h3>
+            <p>Descanso não é perda de tempo. Ele faz parte de uma rotina sustentável.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="title">Perguntas frequentes sobre rotina e bem-estar</h2>
+        <p class="subtitle">
+          Respostas objetivas para dúvidas comuns entre jovens sobre organização e autocuidado.
+        </p>
+
+        <div class="faq">
+          <details>
+            <summary>Como criar uma rotina sem ficar sobrecarregado?</summary>
+            <p>O ideal é começar com poucas metas por vez, distribuir tarefas com realismo e incluir pausas no planejamento.</p>
+          </details>
+
+          <details>
+            <summary>Ter foco significa estudar por muitas horas seguidas?</summary>
+            <p>Não. Foco está mais ligado à qualidade da atenção do que ao tempo contínuo sem descanso.</p>
+          </details>
+
+          <details>
+            <summary>Por que o descanso é importante?</summary>
+            <p>Porque ele ajuda o corpo e a mente a recuperarem energia, melhorando disposição e clareza ao longo do dia.</p>
+          </details>
+
+          <details>
+            <summary>Como desenvolver hábitos saudáveis aos poucos?</summary>
+            <p>Escolha mudanças pequenas, mantenha constância e observe o que funciona melhor na sua realidade.</p>
+          </details>
+
+          <details>
+            <summary>Organização pessoal ajuda no bem-estar emocional?</summary>
+            <p>Sim. Ter mais clareza sobre tarefas, tempo e prioridades pode diminuir estresse e trazer sensação de equilíbrio.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <span class="eyebrow">Continue explorando</span>
+            <h2>Rotina saudável não precisa ser perfeita para funcionar</h2>
+            <p>
+              Pequenos ajustes, constância e autocuidado podem ajudar a construir um dia a dia mais leve e produtivo.
+            </p>
+          </div>
+          <a href="#inicio" class="btn">Voltar ao topo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="container footer">
+      <p>© 2026 Mente em Foco. Portal educativo sobre hábitos e bem-estar.</p>
+      <div class="footer-links">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Contato</a>
+        <a href="mailto:contato@menteemfoco.com">contato@menteemfoco.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
